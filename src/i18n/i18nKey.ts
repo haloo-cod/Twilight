@@ -4,7 +4,7 @@ enum I18nKey {
 	archive = "archive",
 	search = "search",
 	other = "other",
-    gallery='gallery',
+
 	tags = "tags",
 	categories = "categories",
 	recentPosts = "recentPosts",
@@ -47,6 +47,7 @@ enum I18nKey {
 	friends = "friends",
 	anime = "anime",
 	diary = "diary",
+	gallery = "gallery",
 
 	// 番剧页面
 	animeTitle = "animeTitle",
