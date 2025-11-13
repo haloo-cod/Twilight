@@ -1,6 +1,7 @@
 import type { SYSTEM_MODE, DARK_MODE, LIGHT_MODE, WALLPAPER_FULLSCREEN, WALLPAPER_BANNER, WALLPAPER_NONE } from "../constants/constants";
 
 export type SiteConfig = {
+	siteURL: string; // 站点 URL（以斜杠结尾）
 	title: string;
 	subtitle: string;
 	keywords?: string[]; // 站点关键词，用于生成 <meta name="keywords">
@@ -98,6 +99,9 @@ export type SiteConfig = {
 			};
 			navbar?: {
 				transparentMode?: "semi" | "full" | "semifull"; // 导航栏透明模式
+			};
+			waves?: {
+				enable: boolean; // 是否启用水波纹效果
 			};
 		};
 		

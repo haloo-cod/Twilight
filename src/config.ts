@@ -23,6 +23,7 @@ const SITE_LANG = detectBrowserLanguage("en");
 
 
 export const siteConfig: SiteConfig = {
+	siteURL: "https://twilight.spr-aachen.com/", // 请替换为你的站点 URL 并以斜杠结尾
 	title: "Twilight",
 	subtitle: "Blog Template",
 
@@ -97,6 +98,9 @@ export const siteConfig: SiteConfig = {
 			},
 			navbar: {
 				transparentMode: "semifull", // 导航栏透明模式："semi" 半透明加圆角，"full" 完全透明，"semifull" 动态透明
+			},
+			waves: {
+				enable: true, // 启用水波纹效果
 			},
 		},
 
