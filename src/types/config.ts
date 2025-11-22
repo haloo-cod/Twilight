@@ -22,6 +22,8 @@ export type SiteConfig = {
 		};
 	};
 
+	timeZone: -12|-11|-10|-9|-8|-7|-6|-5|-4|-3|-2|-1|0|1|2|3|4|5|6|7|8|9|10|11|12;
+
 	lang:
 		| "zh"
 		| "en"
@@ -102,6 +104,7 @@ export type SiteConfig = {
 			};
 			waves?: {
 				enable: boolean; // 是否启用水波纹效果
+				performanceMode?: boolean; // 是否启用性能模式（简化波浪效果以提升性能）
 			};
 		};
 		
@@ -133,14 +136,14 @@ export type Favicon = {
 export enum LinkPreset {
 	Home = 0,
 	Archive = 1,
-	About = 2,
-	Friends = 3,
-	Anime = 4,
+	Projects = 2,
+	Skills = 3,
+	Timeline = 4,
 	Diary = 5,
-    Gallery = 6,
-	Projects = 7,
-	Skills = 8,
-	Timeline = 9,
+    Albums = 6,
+	Anime = 7,
+	About = 8,
+	Friends = 9,
 }
 
 export type NavBarLink = {
