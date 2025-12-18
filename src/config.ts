@@ -28,11 +28,11 @@ const SITE_TIMEZONE = 8; // from -12 to 12 default in UTC+8
 // 站点配置
 export const siteConfig: SiteConfig = {
     // 站点 URL（以斜杠结尾）
-    siteURL: "https://twilight.spr-aachen.com/", // 请替换为你的站点 URL 并以斜杠结尾
+    siteURL: "https://starlitn.top/", // 请替换为你的站点 URL 并以斜杠结尾
     // 站点标题
-    title: "Twilight",
+    title: "Starlit",
     // 站点副标题
-    subtitle: "Blog Template",
+    subtitle: "Blog by Twilight",
     // 语言配置
     lang: SITE_LANG, // 自动检测的浏览器语言
     // 翻译配置
@@ -84,11 +84,11 @@ export const siteConfig: SiteConfig = {
         src: {
             // 桌面壁纸图片 (支持单张图片或图片数组，当数组长度 > 1 时自动启用轮播)
             desktop: [
-                "/assets/desktop-banner/desktopBanner_1.webp",
+                "/assets/desktop-banner/01.jpg",
             ],
             // 移动壁纸图片 (支持单张图片或图片数组，当数组长度 > 1 时自动启用轮播)
             mobile: [
-                "/assets/mobile-banner/mobileBanner_1.webp",
+                "/assets/mobile-banner/02.jpg",
             ],
         },
         // 壁纸位置 ('top' | 'center' | 'bottom')
@@ -114,10 +114,10 @@ export const siteConfig: SiteConfig = {
                 // 在主页显示文本
                 enable: true,
                 // 主标题
-                title: "Twilight",
+                title: "Sralit",
                 // 副标题，支持单个字符串或字符串数组
                 subtitle: [
-                    "Illuminate Our Paths",
+                    "Starlit's Blog",
                 ],
                 // 副标题打字机效果
                 typewriter: {
@@ -356,11 +356,11 @@ export const umamiConfig = {
 // 资料配置
 export const profileConfig: ProfileConfig = {
     // 头像配置 (相对于 /src 目录。如果以 '/' 开头，则相对于 /public 目录)
-    avatar: "assets/images/avatar.png",
+    avatar: "assets/images/03.jpg",
     // 信息配置
-    name: "Twilight",
+    name: "Starlit",
     // 简介配置
-    bio: "Hi",
+    bio: "Hi This blog is builtbased on ablog template called Twilight",
     // 链接配置
     links: [
         {
