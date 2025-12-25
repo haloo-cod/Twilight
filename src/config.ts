@@ -260,11 +260,11 @@ export const sidebarLayoutConfig: SidebarLayoutConfig = {
         {
             // 组件类型
             type: "announcement", // 公告组件
-            // 是否启用该组件 (现在通过统一配置控制)
+            // 是否启用该组件
             enable: true,
             // 组件所属侧边栏
             side: "left",
-            // 组件显示顺序
+            // 组件显示顺序 (数字越小越靠前)
             order: 2,
             // 组件位置
             position: "top", // 固定在顶部
@@ -279,8 +279,8 @@ export const sidebarLayoutConfig: SidebarLayoutConfig = {
             // 是否启用该组件
             enable: true,
             // 组件所属侧边栏
-            side: "right",
-            // 组件显示顺序
+            side: "left",
+            // 组件显示顺序 (数字越小越靠前)
             order: 3,
             // 组件位置
             position: "sticky", // 粘性定位，可滚动
@@ -300,15 +300,15 @@ export const sidebarLayoutConfig: SidebarLayoutConfig = {
             // 是否启用该组件
             enable: true,
             // 组件所属侧边栏
-            side: "right",
-            // 组件显示顺序
+            side: "left",
+            // 组件显示顺序 (数字越小越靠前)
             order: 4,
             // 组件位置
             position: "sticky", // 粘性定位，可滚动
             // CSS 类名
             class: "onload-animation",
             // 动画延迟时间
-            animationDelay: 250,
+            animationDelay: 200,
             // 响应式配置
             responsive: {
                 // 折叠阈值
@@ -506,29 +506,35 @@ export const particleConfig: ParticleConfig = {
 export const musicPlayerConfig: MusicPlayerConfig = {
     // 启用音乐播放器功能
     enable: true,
-    // 音乐播放器模式 ("meting" API | "local" 本地)
+    // 默认模式 ("meting" API | "local" 本地)
     mode: "meting",
     // meting 模式专属配置
     meting: {
         // Meting API 地址
-        meting_api: "https://meting-api-omega.vercel.app/api",
-        // 音乐源
+        meting_api: "https://api.i-meto.com/meting/api",
+        // 音乐平台
         server: "netease",
-        // 歌单/单曲 ID
-        id: "2161912966",
         // 类型 ("playlist" 歌单 | "song" 单曲)
         type: "playlist",
+        // 资源 ID
+        id: "2161912966",
     },
     // local 模式专属配置
     local: {
         // 播放列表
         playlist: [
             {
+                // 序号
                 id: 1,
+                // 标题
                 title: "深海之息",
+                // 作者
                 artist: "Youzee Music",
+                // 封面
                 cover: "https://p1.music.126.net/PhKOqFtljgHDDpKYM2ADUA==/109951169858309716.jpg",
+                // 路径
                 url: "assets/music/url/深海之息.m4a",
+                // 时长
                 duration: 146,
             },
         ],
@@ -573,17 +579,3 @@ export const pioConfig: import("./types/config").PioConfig = {
         link: "https://nav.kungal.org",
     },
 };
-
-/**
- * 
- */
-
-// 导出所有配置的统一接口
-export const widgetConfigs = {
-    profile: profileConfig,
-    announcement: announcementConfig,
-    layout: sidebarLayoutConfig,
-    particle: particleConfig,
-    music: musicPlayerConfig,
-    pio: pioConfig,
-} as const;

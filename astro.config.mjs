@@ -1,14 +1,14 @@
-import { defineConfig } from "astro/config";
-import decapCmsOauth from "astro-decap-cms-oauth";
-import vercel from "@astrojs/vercel";
 import cloudflarePages from "@astrojs/cloudflare";
 import sitemap from "@astrojs/sitemap";
 import svelte from "@astrojs/svelte";
 import tailwind from "@astrojs/tailwind";
-import swup from "@swup/astro";
-import expressiveCode from "astro-expressive-code";
+import vercel from "@astrojs/vercel";
 import { pluginCollapsibleSections } from "@expressive-code/plugin-collapsible-sections";
 import { pluginLineNumbers } from "@expressive-code/plugin-line-numbers";
+import swup from "@swup/astro";
+import { defineConfig } from "astro/config";
+import decapCmsOauth from "astro-decap-cms-oauth";
+import expressiveCode from "astro-expressive-code";
 import icon from "astro-icon";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeComponents from "rehype-components"; /* Render the custom directive content */
@@ -18,6 +18,7 @@ import remarkDirective from "remark-directive"; /* Handle directives */
 import remarkGithubAdmonitionsToDirectives from "remark-github-admonitions-to-directives";
 import remarkMath from "remark-math";
 import remarkSectionize from "remark-sectionize";
+
 import { siteConfig } from "./src/config.ts";
 import { pluginCustomCopyButton } from "./src/plugins/expressive-code/custom-copy-button.js";
 import { pluginLanguageBadge } from "./src/plugins/expressive-code/language-badge.ts";
@@ -29,10 +30,11 @@ import { remarkExcerpt } from "./src/plugins/remark-excerpt.js";
 import { remarkMermaid } from "./src/plugins/remark-mermaid.js";
 import { remarkReadingTime } from "./src/plugins/remark-reading-time.mjs";
 
-
 // https://astro.build/config
 // Choose adapter depending on deployment environment
-const adapter = process.env.CF_PAGES ? cloudflarePages() : vercel({ mode: "serverless" });
+const adapter = process.env.CF_PAGES
+	? cloudflarePages()
+	: vercel({ mode: "serverless" });
 
 export default defineConfig({
 	site: siteConfig.siteURL,
@@ -42,7 +44,7 @@ export default defineConfig({
 	integrations: [
 		decapCmsOauth({
 			decapCMSVersion: "3.3.3",
-			oauthDisabled: false, // Disable it to use oauth, requires .env configuration
+			oauthDisabled: true, // Disable it to use oauth, requires .env configuration
 		}),
 		tailwind({
 			nesting: true,
