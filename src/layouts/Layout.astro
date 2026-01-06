@@ -18,6 +18,7 @@ import { pathsEqual, url } from "@utils/url-utils";
 import ConfigCarrier from "@components/configCarrier.astro";
 import MusicPlayer from "@components/musicPlayer.svelte";
 import Pio from "@components/pio.svelte";
+import SpeedInsights from "@vercel/speed-insights/astro";
 import "@styles/navbar.css";
 import "@styles/banner.css";
 
@@ -341,6 +342,9 @@ const umamiScripts = umamiConfig.scripts || ""; // 获取Umami scripts配置
 
         <!-- increase the page height during page transition to prevent the scrolling animation from jumping -->
         <div id="page-height-extend" class="hidden h-[300vh]"></div>
+
+        <!-- Vercel Speed Insights -->
+        <SpeedInsights />
 
         <!-- Translate.js integration - lazy loading -->
         {siteConfig.translate?.enable && (
